@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-kpr6w+70dimz)jqrd@_3^v0_!)fo0m_2#owx5oyzyn^e=+6sun
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['zany-space-orbit-655g4pwggqgh5gpr.github.dev', 'localhost']
 
 
 # Application definition
