@@ -1,7 +1,19 @@
-from django.http import JsonResponse
+from rest_framework import viewsets
+from .models import User, Team, Activity, Leaderboard
+from .serializers import UserSerializer, TeamSerializer, ActivitySerializer, LeaderboardSerializer
 
-def api_root(request):
-    return JsonResponse({
-        "message": "Welcome to the Octofit API!",
-        "url": "https://zany-space-orbit-655g4pwggqgh5gpr.github.dev/"
-    })
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+class TeamViewSet(viewsets.ModelViewSet):
+    queryset = Team.objects.all()
+    serializer_class = TeamSerializer
+
+class ActivityViewSet(viewsets.ModelViewSet):
+    queryset = Activity.objects.all()
+    serializer_class = ActivitySerializer
+
+class LeaderboardViewSet(viewsets.ModelViewSet):
+    queryset = Leaderboard.objects.all()
+    serializer_class = LeaderboardSerializer
